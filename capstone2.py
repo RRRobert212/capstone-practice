@@ -43,7 +43,7 @@ def state_count(states):
 def count_by_hour():
 
     #just split the list up into 24 sections and do state_count for each of them, a list of lists.
-    #to split the data look at the [-1] element (the time) and check the [-3] element, the hour. everytime it changes, make a new list
+    #to split the data look at the [-1] element (the time) and check the [-3] element, the hour. everytime it changes, make a new list.
 
     return
 
