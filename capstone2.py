@@ -39,13 +39,20 @@ def state_count(states):
 
     return count_list
 
+#give a count of number of state plates per hour, i.e. from 0000 - 0059, 0100 - 0159, ... 2300 - 2359
+def count_by_hour():
+
+    #just split the list up into 24 sections and do state_count for each of them, a list of lists.
+    #to split the data look at the [-1] element (the time) and check the [-3] element, the hour. everytime it changes, make a new list.
+
+    return
 
 
 def main():
     
     parsed_data = loadToList()
     state_list = states(parsed_data)
-    #unique_states(state_list)
+    unique_states(state_list)
     print(state_count(state_list))
 
     return
