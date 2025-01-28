@@ -30,9 +30,14 @@ def unique_states(states):
 
 def state_count(states):
 
-    state_counts = []
-    for state in states:
+    all = [[state, states.count(state)] for state in states]
+    count_list = []
+    for a in all:
+        if a not in count_list:
+            count_list.append(a)
+    count_list.sort(reverse= True, key = lambda x: x[1])
 
+    return count_list
 
 
 
@@ -40,7 +45,8 @@ def main():
     
     parsed_data = loadToList()
     state_list = states(parsed_data)
-    unique_states(state_list)
+    #unique_states(state_list)
+    print(state_count(state_list))
 
     return
 
